@@ -46,6 +46,8 @@ c--- write-out the cuts we are using
       endif
       write(6,99) '*   eta(photon)          <   ',gammrapmax,
      &                '                *'
+      write(6,99) '*   eta(photon)          <   ',gammrapmin,
+     &                '                *'
       write(6,99) '*   R(photon,lepton)     >   ',Rgalmin,
      &                '                *'
       write(6,99) '*   R(photon,photon)     >   ',Rgagamin,
@@ -84,7 +86,8 @@ c--- initialize counters and arrays that will be used to perform cuts
 C     Basic pt and rapidity cuts for photon
       if (countgamm .eq. 1) then
           if (     (pt(gammindex(1),pjet) .lt. gammpt) .or.
-     &    (abs(etarap(gammindex(1),pjet)) .gt. gammrapmax)) then
+     &    (abs(etarap(gammindex(1),pjet)) .gt. gammrapmax) .or.
+     &    (abs(etarap(gammindex(1),pjet)) .lt. gammrapmin)) then
             photoncuts=.true.
             return
           endif
@@ -97,7 +100,9 @@ C     Basic pt and rapidity cuts for photon
         if ( ( pth .lt. gammpt) .or.
      &       ( pts .lt. gammpt2) .or.
      &       (abs(etarap(gammindex(1),pjet)) .gt. gammrapmax) .or.
-     &       (abs(etarap(gammindex(2),pjet)) .gt. gammrapmax) ) then
+     &       (abs(etarap(gammindex(1),pjet)) .lt. gammrapmin) .or.
+     &       (abs(etarap(gammindex(2),pjet)) .gt. gammrapmax) .or.
+     &       (abs(etarap(gammindex(2),pjet)) .lt. gammrapmin) ) then
           photoncuts=.true.
           return
         endif
@@ -115,7 +120,10 @@ C     Basic pt and rapidity cuts for photon
      &       ( pts .lt. gammpt3) .or.
      &       (abs(etarap(gammindex(1),pjet)) .gt. gammrapmax) .or.
      &       (abs(etarap(gammindex(2),pjet)) .gt. gammrapmax) .or.
-     &       (abs(etarap(gammindex(3),pjet)) .gt. gammrapmax) ) then
+     &       (abs(etarap(gammindex(3),pjet)) .gt. gammrapmax) .or.
+     &       (abs(etarap(gammindex(1),pjet)) .lt. gammrapmin) .or.
+     &       (abs(etarap(gammindex(2),pjet)) .lt. gammrapmin) .or.
+     &       (abs(etarap(gammindex(3),pjet)) .lt. gammrapmin) ) then
           photoncuts=.true.
           return
         endif

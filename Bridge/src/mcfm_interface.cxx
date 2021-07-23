@@ -143,7 +143,7 @@ void book_grid()  // inital grid booking
   int    nXbins  = 40;
   int    xorder  = 6;
   double q2Low   = 1.0*1.0;
-  double q2Up    = 7000*7000;
+  double q2Up    = 10000*10000;
   int    nQ2bins = 15;
   int    qorder  = 3;
   // set transform2 value
@@ -236,10 +236,10 @@ void book_grid()  // inital grid booking
 
       //      q2Low = 8280.99, q2Up = 8281.01;
       //      q2Up    = 7000*7000;
-      //      q2Up    = 1.01e8;
+      q2Up    = 1.01e8;
       //      nQ2bins = 15;
       //      qorder  = 4;
-      q2Low = std::pow(1.,2), q2Up = std::pow(7000.,2);
+      
       //pdf_function = "basic"; 
       pdf_function = "basic";
       glabel += TString::Format("-GammaProd_%d",nproc_.nproc).Data();

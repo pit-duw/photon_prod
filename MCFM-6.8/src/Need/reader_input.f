@@ -337,6 +337,8 @@ c--- settings for photon processes
       if (verbose) call writeinput(6,' * ',' ','gammpt')
       read(20,*) gammrapmax
       if (verbose) call writeinput(6,' * ',' ','gammrapmax')
+      read(20,*) gammrapmin
+      if (verbose) call writeinput(6,' * ',' ','gammrapmin')
       read(20,*) gammpt2
       if (verbose) call writeinput(6,' * ',' ','gammpt2')
       read(20,*) gammpt3

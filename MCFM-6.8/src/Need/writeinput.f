@@ -361,6 +361,9 @@ c--- catch special scale choices for stop+b process
       if ((tag .eq. 'gammrapmax') .or. (writeall)) then
       write(unitno,fmt=f99) gammrapmax,'gammrapmax'
       endif
+      if ((tag .eq. 'gammrapmin') .or. (writeall)) then
+      write(unitno,fmt=f99) gammrapmin,'gammrapmin'
+      endif
       if ((tag .eq. 'gammpt2') .or. (writeall)) then
       write(unitno,fmt=f99) gammpt2,'gammpt2'
       endif

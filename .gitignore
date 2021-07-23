@@ -1,0 +1,5 @@
+MCFM-6.8/Bin/*.txt
+MCFM-6.8/Bin/*.root
+MCFM-6.8/Bin/*.grid
+*.o
+*.a
