@@ -1981,7 +1981,7 @@ MCFMLIB = $(OURCODE) $(OTHER)
 
 # CERNLIB libraries for PDFLIB: -lpdflib804 -lmathlib -lpacklib 
 
-LDFLAGS = -u setup_mcfmbridge -L/usr/local/lib -lmcfmbridge -L/usr/local/lib -lAPPLgrid -m64 -L/home/pit/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic -L/usr/local/lib -lhoppet_v1 -m64 -L/home/pit/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic -lstdc++
+LDFLAGS = -u setup_mcfmbridge -L/local0/p_duwe01/test/photon_prod/mcfmbridge/lib -lmcfmbridge -L/local0/p_duwe01/applgrid/lib -lAPPLgrid -m64 -L/local0/p_duwe01/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic -L/local0/p_duwe01/hoppet/lib -lhoppet_v1 -m64 -L/local0/p_duwe01/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic -lstdc++
 
 install : obj libs dat documentation pdfsets mcfm
 

@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 # These variables need to exist
-prefix=/usr/local
+prefix=/local0/p_duwe01/test/photon_prod/mcfmbridge
 
 if [[ $# -eq 0 || -n $( echo $* | egrep -- "--help|-h" ) ]]; then
     echo "mcfmbridge-config: configuration tool for the APPLgrid - mcfm bridge"
@@ -23,7 +23,7 @@ fi
 OUT=""
 
 tmp=$( echo "$*" | egrep -- '--\<prefix\>')
-test -n "$tmp" && OUT="$OUT /usr/local"
+test -n "$tmp" && OUT="$OUT /local0/p_duwe01/test/photon_prod/mcfmbridge"
 
 tmp=$( echo "$*" | egrep -- '--\<incdir\>')
 test -n "$tmp" && OUT="$OUT ${prefix}/include"

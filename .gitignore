@@ -3,3 +3,7 @@ MCFM-6.8/Bin/*.root
 MCFM-6.8/Bin/*.grid
 *.o
 *.a
+*/*.o
+*/*.a
+
+*.mod
