@@ -7,3 +7,15 @@ MCFM-6.8/Bin/*.grid
 */*.a
 
 *.mod
+
+.vscode/settings.json
+
+*.Po
+
+Bridge/src/standSimple
+
+*.root-save
+
+MCFM-6.8/Bin/mcfm
+
+mcfmbridge/bin/standSimple
