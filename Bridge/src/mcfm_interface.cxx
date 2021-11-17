@@ -225,9 +225,9 @@ void book_grid() // inital grid booking
         nXbins = 40;
         xorder = 6;
 
-        q2Low = 8280.99, q2Up = 8281.01;
+        //q2Low = 8280.99, q2Up = 8281.01;
         //      q2Up    = 7000*7000;
-        //      q2Up    = 10000*10000;
+              q2Up    = 10000*10000;
         //      nQ2bins = 15;
         //      qorder  = 4;
 
